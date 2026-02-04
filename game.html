@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roblox Unblocked</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>🔥 Popular Roblox Games</h1>
+
+<div class="grid" id="games"></div>
+
+<script src="js/games.js"></script>
+<script>
+  const grid = document.getElementById("games");
+
+  games.forEach(game => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <img src="${game.image}">
+      <h3>${game.name}</h3>
+    `;
+    div.onclick = () => {
+      location.href = `game.html?id=${game.id}`;
+    };
+    grid.appendChild(div);
+  });
+</script>
+
+</body>
+</html>
 
